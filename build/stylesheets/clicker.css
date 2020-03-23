@@ -1,0 +1,44 @@
+.clicker-section{
+    font-family: 'Baloo 2', cursive;
+    height: 15rem;
+    width: 25%;
+    padding: 3rem;
+}
+
+.clicker-section section {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    border: solid black 2px;
+    font-family: 'Baloo 2', cursive;
+    font-size: 2rem;
+
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr)); 
+    background-color: aqua;
+}
+
+.clicker-section button {
+    font-family: 'Baloo 2', cursive;
+    font-size: 1rem;
+    padding: .5rem;
+    background-color: blue;
+    border-color: blue;
+    margin: 5px;
+}
+
+.clicker-section button:hover {
+    cursor: pointer;
+}
+
+.clicker-section button:focus {
+    outline: none;
+}
+
+.clicker-section ul {
+    list-style: none;
+}
+
+.clicker-section li {
+    font-size: 2rem;
+}
+
