@@ -17,9 +17,9 @@ function Clicker(){
     }
 
     return(
+
+            // <h1>Clicker</h1>
         <section className="clicker-section">
-            <h1>Clicker</h1>
-            <section>
                 <div>Number of Clicks: {clicks}</div>
                 <span>
                     <button onClick={() => setClicks(clicks + 1)}>Click</button>
@@ -30,7 +30,6 @@ function Clicker(){
                     <button onClick={() => setClicksQueue([])}>Reset Click History</button>
                     <ul>{renderClickAmounts()}</ul>
                 </span>
-            </section>
         </section>
     )
 }

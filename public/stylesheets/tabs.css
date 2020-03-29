@@ -1,0 +1,39 @@
+.root{
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: 'Baloo 2', cursive;
+    height: 15rem;
+    width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    border: solid 2px black;
+    background-color: purple;
+}
+
+.tabs-section ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+
+}
+
+.tabs-section ul li{
+    width: 30%;
+}
+
+.tabs-section ul li:hover{
+    width: 30%;
+    cursor: pointer;
+}
+
+.tabs-section ul li h1{
+    margin: 0;
+}
