@@ -1,8 +1,15 @@
 .clock-section{
     font-family: 'Baloo 2', cursive;
     height: 15rem;
-    width: 60%;
-    padding: 3rem;
+    width: 30%;
+    padding: 1rem;
+    margin: 1rem;
+
+    display: grid;
+    border: solid black 2px;
+
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr)); 
+    background-color: magenta;
 }
 
 .clock-section h1{
@@ -10,14 +17,6 @@
     padding: 0;
 }
 
-.clock-section section {
-    display: grid;
-    padding: 5%;
-    border: solid black 2px;
-
-    grid-template-columns: repeat(auto-fill, minmax(100px,1fr)); 
-    background-color: magenta;
-}
 
 .clock-section div{
     align-self: center;
@@ -26,12 +25,12 @@
 }
 
 @media (min-width: 30rem) {
-  .clock-section section {
+  .clock-section {
     grid-template-columns: 1fr 1fr ;
     grid-template-rows: 1fr 1fr;
   }
 }
 
-.clock-section section div {
+.clock-section div {
     font-size: 2rem;
 }
