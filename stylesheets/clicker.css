@@ -1,14 +1,12 @@
 .clicker-section{
     font-family: 'Baloo 2', cursive;
-    height: 15rem;
+    height: 20%;
     width: 25%;
-    padding: 3rem;
-}
+    margin: 1rem;
+    padding: 1rem;
 
-.clicker-section section {
     display: flex;
     flex-direction: column;
-    padding: 5%;
     border: solid black 2px;
     font-family: 'Baloo 2', cursive;
     font-size: 2rem;

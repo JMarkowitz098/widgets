@@ -1,0 +1,21 @@
+.sliding-puzzle{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.row{
+    display: flex;
+}
+
+.block {
+    height: 3rem;
+    width: 3rem;
+    border: solid black 1px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.empty {
+    background-color: lightgray;
+}

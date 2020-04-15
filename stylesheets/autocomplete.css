@@ -1,0 +1,26 @@
+.autocomplete-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: 'Baloo 2', cursive;
+    height: 20rem;
+    width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    border: solid 2px black;
+    background-color: purple;
+}
+
+.tabs-section ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+
+}
+
+.tabs-section input {
+    padding: 1rem;
+
+}
