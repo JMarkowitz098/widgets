@@ -8,7 +8,7 @@ function SlidingPuzzle() {
         let puzzle = []
         let numRows = 4;
         let numCols = 4;
-        let randomNums = shuffle( numRows * numCols)
+        let randomNums = shuffle(numRows * numCols)
         let num = 0
 
 
@@ -20,7 +20,6 @@ function SlidingPuzzle() {
             }
             puzzle.push(newRow)
         }
-        // puzzle[0][0] = "";
 
         return puzzle;
     }
@@ -48,14 +47,29 @@ function SlidingPuzzle() {
                     key={`row-${rowIdx}`}
                     className='row'
                 >
-                    {row.map((block, colIdx) => <div 
-                        key={`col-${colIdx}`}
-                        className="block"
-                        onClick={(e) => moveBlock(e, [rowIdx, colIdx])}
-                    >{block}</div>)}
+                    {renderPuzzleBlock(row, rowIdx)}
                 </div> 
                 )
         })
+    }
+
+    function renderPuzzleBlock(row, rowIdx){
+        return row.map((block, colIdx) => {
+        return (<div
+            style={renderCursorStyle([rowIdx, colIdx])}
+            key={`col-${colIdx}`}
+            className="block"
+            onClick={(e) => moveBlock(e, [rowIdx, colIdx])}
+        >{block}</div>)})
+    }
+
+    function renderCursorStyle(blockPos){
+        let emptyPos = getEmptyPos();
+        if (validBlockToSwap(emptyPos, blockPos)){
+            return {cursor:'pointer'}
+        } else {
+            return
+        }
     }
 
     function moveBlock (e, blockPos) {
@@ -95,6 +109,14 @@ function SlidingPuzzle() {
 
         return false;
     }
+
+    // function getElementByValue(val){
+    //     let divs = document.getElementsByClassName('block')
+    //     for (let div of divs){
+    //         console.log(div)
+    //         if (div.innerHTML == val ) return div
+    //     }
+    // }
 
     function swapBlocks(emptyPos, blockPos){
         let [blockX, blockY] = blockPos;
